@@ -2,11 +2,11 @@ import numpy as np
 
 def calculate(list):
     #if list do not have right lenght
-    if len(input_list) != 9:
+    if len(list) != 9:
         raise ValueError("List must contain nine numbers.")
 
     # Convert list to 3x3 numpy array
-    matrix = np.array(input_list).reshape(3, 3)
+    matrix = np.array(list).reshape(3, 3)
 
     # Compute statistics
     calculations = {
@@ -29,10 +29,5 @@ def calculate(list):
                 matrix.sum(axis=1).tolist(),
                 matrix.sum().item()]
     }
-
-    return calculations
-
-
-
 
     return calculations
